@@ -38,6 +38,9 @@
   font-style: normal;
 }
 
+#socials>li:hover{
+  opacity: 0.5;
+}
 
 @media screen and (max-width: 1200px){
   #main_img{
@@ -80,6 +83,7 @@
 
   #top_content{
     width: 100% !important;
+    margin-bottom: 20rem;
   }
 
   .menu{
