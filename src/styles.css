@@ -67,15 +67,19 @@
   }
 
   #main_heading{
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   #sub_heading{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   #main_section{
     width: 100%;
+  }
+
+  #top_content{
+    width: 100% !important;
   }
 
   .menu{
@@ -85,6 +89,7 @@
     grid-template-columns: auto;
     justify-items: start;
     border-radius: 1rem;
+    margin-bottom: 1rem !important;
   }
 
   .menu a, .menu a li{
