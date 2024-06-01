@@ -105,6 +105,19 @@
     background-color: var(--custom_blue_light);
     border-radius: 0;
   }
+
+  #bottom_content{
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  #about_txt{
+    margin: 2.5rem 0;
+    background: rgb(12,70,98);
+    background: linear-gradient(90deg, rgba(12,70,98,1) 0%, rgba(13,91,128,1) 100%);
+    padding: 2.5rem;
+  }
 }
 
 /* Testing */
@@ -144,7 +157,6 @@
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  float: right;
   padding: 28px 0;
   position: relative;
   user-select: none;

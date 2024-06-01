@@ -1,1 +1,3 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor sit amet placerat vulputate. Quisque non ipsum ante.
+I am David Mould, a dedicated and ambitious Web and Mobile Development student at the University of the West of Scotland. With a solid foundation in Java, relational databases, and web technologies such as HTML, JavaScript, and PHP, I am passionate about creating dynamic and user-friendly applications. 
+
+My academic and project experiences have equipped me with strong problem-solving skills, a keen eye for detail, and the ability to work effectively both independently and in team settings. As I build my career, I aim to leverage my technical skills and creative thinking to develop innovative solutions that enhance user experiences.

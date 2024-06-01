@@ -12,7 +12,6 @@ function App() {
     <div className="App w-full h-screen grid grid-rows-[auto,8fr,1fr,auto]">
       <NavbarComponent /> {/* Using the NavbarComponent component */}
       <PortfolioComponent /> {/* Using the PortfolioComponent component */}
-      <PostComponent /> {/* Using the PostComponent component */}
       <FooterComponent /> {/* Using the FooterComponent component */}
     </div>
   );
