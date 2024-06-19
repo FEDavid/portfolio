@@ -10,7 +10,7 @@ function Component() {
   const lt_component = <SocialIcon bgColor="#D4DE29" fgColor="#021117" url="https://linktr.ee/dmould" />
 
   return (
-    <div className="bg-[--custom_lime] h-min self-end text-xl font-bold text-[--custom_blue] ps-3 pe-2 px-3 mt-5 flex justify-between whitespace-nowrap">
+    <div className="bg-[--custom_lime] h-min self-end text-xl font-bold text-[--custom_blue] ps-3 pe-2 px-3 flex justify-between whitespace-nowrap border-t">
       <h2 className="font-[Trebuchet_MS] text-xl w-min whitespace-nowrap mr-5 select-none self-center">david-mould.<span className='font-black'>DEV</span></h2>
       <ul id="socials" class="text-sm">
         <li class="inline-block">{gh_component}</li>

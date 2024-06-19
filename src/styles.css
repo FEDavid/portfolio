@@ -10,10 +10,24 @@
 :root {
     --bg_opacity: 0.6;
     --bg_gradient: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-    --custom_blue: #021117;
+    --custom_blue: #021117; 
     --custom_blue_light: #0d5b80;
     --custom_lime: #D4DE29;
     --custom_lime_dark: #7f8415;
+}
+
+.custom_pattern{
+  background-color: #D4DE29;
+  opacity: 1;
+  background-image: radial-gradient(rgba(2, 17, 23, 0.25) 1.1500000000000001px, rgba(212, 222, 41, 1) 1.1500000000000001px);
+  background-size: 23px 23px;
+}
+
+.custom_pattern_blue{
+  background-color: #021117;
+  opacity: 1;
+  background-image: radial-gradient(rgba(212, 222, 41, 0.15) 1.1500000000000001px, rgba(2, 17, 23, 1) 1.1500000000000001px);
+  background-size: 23px 23px;
 }
 
 .custom_gradient {
@@ -38,8 +52,73 @@
   font-style: normal;
 }
 
+#socials>li{
+  transition: opacity 0.25s;
+}
+
 #socials>li:hover{
   opacity: 0.5;
+}
+
+.tech_icons>i{
+  padding: 1.5rem;
+  /* justify-self: center; */
+  border-radius: 100%;
+  font-size: 4rem;
+  color: var(--custom_lime);
+  color: white;
+  background-color: var(--custom_blue);
+  transition: opacity 0.25s;
+}
+
+.icon_tooltips {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.icon_tooltips .tooltiptext {
+  visibility: hidden;
+  background-color: white;
+  color: #000;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: helvetica;
+  padding: 1rem;
+  border-radius: 6px;
+
+  bottom: 90%;
+  left: 50%;
+  transform: translate(-50%, 0);
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.icon_tooltips .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.icon_tooltips:hover .tooltiptext {
+  visibility: visible;
+}
+
+.icon_tooltips .tooltiptext {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.icon_tooltips:hover .tooltiptext {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1200px){
@@ -61,6 +140,10 @@
 
   #main_section{
     width: 75%;
+  }
+
+  .tech_icons>i{
+    font-size: 3rem;
   }
 }
 
@@ -86,6 +169,10 @@
     margin-bottom: 20rem;
   }
 
+  .header{
+    padding-top: 1rem;
+  }
+
   .menu{
     width: 100%;
     grid-column: 1 / 3;
@@ -93,7 +180,6 @@
     grid-template-columns: auto;
     justify-items: start;
     border-radius: 1rem;
-    margin-bottom: 1rem !important;
   }
 
   .menu a, .menu a li{
@@ -113,10 +199,15 @@
   }
 
   #about_txt{
-    margin: 2.5rem 0;
+    margin: 2.5rem 0 0 0;
     background: rgb(12,70,98);
     background: linear-gradient(90deg, rgba(12,70,98,1) 0%, rgba(13,91,128,1) 100%);
     padding: 2.5rem;
+  }
+
+  .tech_icons>i{
+    padding: 1rem;
+    font-size: 2rem;
   }
 }
 
@@ -157,7 +248,7 @@
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  padding: 28px 0;
+  
   position: relative;
   user-select: none;
 }
