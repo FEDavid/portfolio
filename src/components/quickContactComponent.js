@@ -22,7 +22,7 @@ function Component() {
                 <input type="text" placeholder="Name" class="p-2 rounded-md w-full"/>
                 <input type="email" placeholder="Email" class="p-2 rounded-md w-full"/>
                 <textarea placeholder="Message" class="p-2 rounded-md w-full h-[100px]"></textarea>
-                <button class="p-2 rounded-md w-full bg-[--custom_lime] text-[--custom_blue] font-bold">Send</button>
+                <button class="p-2 rounded-md w-full bg-[--custom_lime] text-[--custom_blue] font-bold hover:opacity-50 transition-opacity duration-[250ms]">Send</button>
             </form>
         </div>
     </div>
