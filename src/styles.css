@@ -32,7 +32,7 @@
 }
 
 .custom_gradient {
-    background: var(--bg_gradient);
+    background: linear-gradient(90deg, rgba(12,70,98,1) 0%, rgba(13,91,128,1) 100%);
 }
 
 .roboto-mono-font{

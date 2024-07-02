@@ -1,0 +1,1 @@
+This is a simple weather app using the free API provided by https://openweathermap.org/api. The app itself has been built with Python/Flask, obviously HTML and CSS - specifically some Bootstrap. I have utilized Bootstrap as it is native for responsive design. 

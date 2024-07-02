@@ -6,6 +6,8 @@ import '../styles.css';
 
 // Images
 import testImage from '../media/filter_portrait.png';
+import flask_weather_thumbnail from '../media/flask_weather.png';
+import php_ticket_thumbnail from '../media/php_ticket.png';
 
 // Icons
 import { SocialIcon } from 'react-social-icons';
@@ -13,12 +15,15 @@ import { SocialIcon } from 'react-social-icons';
 // Components
 import TechStackComponent from './techStackComponent';
 import QuickContactsComponent from './quickContactComponent';
+import PostComponent from './postComponent';
 
 
 
 function Component() {
 
   const [aboutText, setAboutText] = useState('');
+  const [postText1, setPostText1] = useState('');
+  const [postText2, setPostText2] = useState('');
   const gh_component = <SocialIcon bgColor="#D4DE29" fgColor="#021117" url="https://github.com/FEDavid" />
   const li_component = <SocialIcon bgColor="#D4DE29" fgColor="#021117" url="https://www.linkedin.com/in/david-t-mould/" />
   const lt_component = <SocialIcon bgColor="#D4DE29" fgColor="#021117" url="https://linktr.ee/dmould" />
@@ -28,6 +33,22 @@ function Component() {
       .then(response => response.text())
       .then(data => {
         setAboutText(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch('/flask_weather_txt.txt')
+      .then(response => response.text())
+      .then(data => {
+        setPostText1(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch('/php_ticket_txt.txt')
+      .then(response => response.text())
+      .then(data => {
+        setPostText2(data);
       });
   }, []);
 
@@ -55,6 +76,8 @@ function Component() {
         <img id="main_img" src={testImage} alt="My portrait" className="absolute bottom-10 right-10 h-5/6 max-h-[600px] opacity-70 z-[-1]"/>
       </div>
       <TechStackComponent />
+      <PostComponent thumbnail = {flask_weather_thumbnail} title="Flask weather web application" content={postText1} stack={["Python", "Flask", "HTML5", "CSS3"]} link="https://github.com/FEDavid/Basic_weather"/>
+      <PostComponent thumbnail = {php_ticket_thumbnail} title="PHP ticket web application" content={postText2} stack={["PHP", "MySQL", "HTML5", "CSS3"]} link="https://github.com/FEDavid/PHP-ticket_system"/>
       <QuickContactsComponent />
     </div>
   );
