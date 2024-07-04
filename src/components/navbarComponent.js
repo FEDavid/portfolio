@@ -19,7 +19,7 @@ function Component() {
           <a href="#"><li className='p-5 inline-block rounded-b ml-5 hover:text-[--custom_blue] hover:bg-[--custom_lime]'>
           Blog
           </li></a>
-          <a href="#"><li className='p-5 inline-block rounded-b ml-5 hover:text-[--custom_blue] hover:bg-[--custom_lime]'>
+          <a href="#contact_link"><li className='p-5 inline-block rounded-b ml-5 hover:text-[--custom_blue] hover:bg-[--custom_lime]'>
           Contact
           </li></a>
       </ul>

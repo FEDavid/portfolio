@@ -4,10 +4,12 @@ import '../styles.css';
 
 function Component() {
   return (
-    <div className="p-5 text-[--custom_blue] grid custom_pattern">
-      <div className='justify-self-center lg:w-[60%] w-[90%]'>
-        <h2 className="text-xl font-bold lg:text-4xl text-[--custom_blue]"><span className='lg:text-3xl text-base relative bottom-[3px] font-extralight tracking-tighter me-1 lg:me-2'>//</span>Tools and Technologies I Use</h2>
-        <div className='grid mt-4 gap-6 tech_icons justify-items-center grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+    <div className="p-8 text-[--custom_blue] grid custom_pattern">
+      <div className='justify-self-center lg:w-[60%] w-full'>
+        <p className='p-4 custom_gradient text-[--custom_lime] text-lg font-black lg:text-4xl dm-sans-regular-font rounded-full'>
+          <h2 className="lg:font-medium"><span class="material-symbols-outlined top-[3px] lg:top-1 relative me-2 text-xl lg:text-4xl opacity-50">stacks</span>Tools + Technologies I Use</h2>
+        </p>
+        <div className='grid mt-8 gap-6 tech_icons justify-items-center grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           <i class="icon_tooltips devicon-html5-plain"><span>HTML5</span></i>
           <i class="icon_tooltips devicon-css3-plain"><span>CSS3</span></i>
           <i class="icon_tooltips devicon-tailwindcss-plain"><span>Tailwind CSS</span></i>
