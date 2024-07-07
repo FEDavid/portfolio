@@ -21,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/post/:filename" element={<PostDetail />} /> {/* Route for post detail */}
+            <Route path="/posts/:filename" element={<PostDetail />} /> {/* Route for post detail */}
           </Routes>
         </div>
         <div>

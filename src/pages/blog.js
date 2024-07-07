@@ -15,6 +15,8 @@ const Blog = () => {
           postFiles.map(async (file) => {
             const filePath = file.replace('./', '/posts/');
             const response = await fetch(filePath);
+
+            console.log(filePath, response);
             
             if (!response.ok) {
               throw new Error(`Failed to fetch ${filePath}`);
@@ -23,7 +25,7 @@ const Blog = () => {
             const text = await response.text();
             const content = marked(text);
 
-            console.log(text);
+            // console.log(text);
 
             return { content, fileName: file.replace('./', '').replace('.md', '') };
           })
@@ -46,7 +48,7 @@ const Blog = () => {
         {posts.map((post, index) => (
           <div key={index} className='post p-5 mb-5 bg-[--custom_blue_light] rounded-lg'>
             <div className='mb-5' dangerouslySetInnerHTML={{ __html: post.content }} />
-            <Link className='text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80' to={`/post/${post.fileName}`}>Open post - {post.fileName}</Link>
+            <Link className='text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80' to={`/posts/${post.fileName}`}>Open post - {post.fileName}</Link>
           </div>
         ))}
       </div>
