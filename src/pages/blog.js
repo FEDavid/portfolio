@@ -22,6 +22,9 @@ const Blog = () => {
 
             const text = await response.text();
             const content = marked(text);
+
+            console.log(text);
+
             return { content, fileName: file.replace('./', '').replace('.md', '') };
           })
         );
