@@ -1,4 +1,3 @@
-// src/pages/Blog.js
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { marked } from 'marked';
@@ -8,19 +7,30 @@ const Blog = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const context = require.context('../../public/posts', false, /\.md$/);
-      const postFiles = context.keys();
+      try {
+        const context = require.context('../../public/posts', false, /\.md$/);
+        const postFiles = context.keys();
 
-      const postsData = await Promise.all(
-        postFiles.map(async (file) => {
-          const response = await fetch(file.replace('./', '/posts/'));
-          const text = await response.text();
-          const content = marked(text);
-          return { content, fileName: file.replace('./', '').replace('.md', '') };
-        })
-      );
+        const postsData = await Promise.all(
+          postFiles.map(async (file) => {
+            const filePath = file.replace('./', '/posts/');
+            const response = await fetch(filePath);
+            
+            if (!response.ok) {
+              throw new Error(`Failed to fetch ${filePath}`);
+            }
 
-      setPosts(postsData);
+            const text = await response.text();
+            const content = marked(text);
+            return { content, fileName: file.replace('./', '').replace('.md', '') };
+          })
+        );
+
+        setPosts(postsData);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+        // Handle error state if needed
+      }
     };
 
     fetchPosts();
@@ -31,11 +41,11 @@ const Blog = () => {
       <div className='px-5 w-full md:w-[60%] md:justify-self-center md:pt-5'>
         <h1 className='text-3xl text-[--custom_lime] font-extrabold mb-5'><span className='text-white font-medium'>@</span>Blog</h1>
         {posts.map((post, index) => (
-        <div key={index} className='post p-5 mb-5 bg-[--custom_blue_light] rounded-lg'>
-          <div className='mb-5'dangerouslySetInnerHTML={{ __html: post.content }} />
-          <Link className='text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80' to={`/post/${post.fileName}`}>Open post - {post.fileName}</Link>
-        </div>
-      ))}
+          <div key={index} className='post p-5 mb-5 bg-[--custom_blue_light] rounded-lg'>
+            <div className='mb-5' dangerouslySetInnerHTML={{ __html: post.content }} />
+            <Link className='text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80' to={`/post/${post.fileName}`}>Open post - {post.fileName}</Link>
+          </div>
+        ))}
       </div>
     </div>
   );
