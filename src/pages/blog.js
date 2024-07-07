@@ -8,14 +8,13 @@ const Blog = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const context = require.context('../../public/posts', false, /\.md$/);
+      const context = require.context('./posts', false, /\.md$/);
       const postFiles = context.keys();
 
       const postsData = await Promise.all(
         postFiles.map(async (file) => {
           const response = await fetch(file.replace('./', '/posts/'));
           const text = await response.text();
-          console.log(text);
           const content = marked(text);
           return { content, fileName: file.replace('./', '').replace('.md', '') };
         })
