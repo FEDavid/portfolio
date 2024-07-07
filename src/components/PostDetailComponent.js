@@ -9,12 +9,17 @@ const PostDetail = () => {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const response = await fetch(`/posts/${filename}.md`, { cache: 'no-store' });
-      if (response.ok) {
-        const text = await response.text();
-        setContent(text);
-      } else {
-        console.error(`Failed to fetch /posts/${filename}.md`);
+      try {
+        const response = await fetch(`/posts/${filename}.md`, { cache: 'no-store' });
+
+        if (response.ok) {
+          const text = await response.text();
+          setContent(text);
+        } else {
+          throw new Error(`Failed to fetch /posts/${filename}.md`);
+        }
+      } catch (error) {
+        console.error('Error fetching post:', error);
       }
     };
 
