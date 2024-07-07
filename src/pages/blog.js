@@ -16,6 +16,7 @@ const Blog = () => {
           const response = await fetch(file.replace('./', '/posts/'));
           const text = await response.text();
           const content = marked(text);
+          console.log(content);
           return { content, fileName: file.replace('./', '').replace('.md', '') };
         })
       );
