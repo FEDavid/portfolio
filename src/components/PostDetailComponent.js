@@ -1,7 +1,7 @@
 // src/pages/PostDetailComponent.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { marked } from 'marked';
+import ReactMarkdown from 'react-markdown';
 import { Link } from 'react-router-dom';
 
 const PostDetail = () => {
@@ -12,8 +12,7 @@ const PostDetail = () => {
         const fetchPost = async () => {
             const response = await fetch(`/posts/${filename}.md`);
             const text = await response.text();
-            const htmlContent = marked(text);
-            setContent(htmlContent);
+            setContent(text);
         };
 
         fetchPost();
@@ -22,7 +21,9 @@ const PostDetail = () => {
     return (
         <div className='text-white post p-5 m-5 mt-0 bg-[--custom_blue_light] rounded-lg'>
             <h1 className='font-extrabold'>{filename || "Post"}</h1>
-            <div className='mb-5' dangerouslySetInnerHTML={{ __html: content }} />
+            <div className='mb-5'>
+                <ReactMarkdown>{content}</ReactMarkdown>
+            </div>
             {/* Breadcrumbs */}
             <div className='px-5 py-2 bg-[--custom_blue] rounded-full'>
                 <Link className='text-[--custom_lime] transition-opacity hover:opacity-80' to='/'>Home</Link>
