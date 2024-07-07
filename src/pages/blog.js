@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { marked } from 'marked';
+import ReactMarkdown from 'react-markdown';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -21,12 +21,8 @@ const Blog = () => {
             }
 
             const text = await response.text();
-            const content = marked(text);
-
-            console.log(filePath);
-            console.log(text);
-
-            return { content, fileName: file.replace('./', '').replace('.md', '') };
+            // Use ReactMarkdown component for rendering the markdown content
+            return { content: text, fileName: file.replace('./', '').replace('.md', '') };
           })
         );
 
@@ -45,7 +41,9 @@ const Blog = () => {
         <h1 className='text-3xl text-[--custom_lime] font-extrabold mb-5'><span className='text-white font-medium'>@</span>Blog</h1>
         {posts.map((post, index) => (
           <div key={index} className='post p-5 mb-5 bg-[--custom_blue_light] rounded-lg'>
-            <div className='mb-5' dangerouslySetInnerHTML={{ __html: post.content }} />
+            <div className='mb-5'>
+              <ReactMarkdown>{post.content}</ReactMarkdown>
+            </div>
             <Link className='text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80' to={`/posts/${post.fileName}`}>Open post - {post.fileName}</Link>
           </div>
         ))}

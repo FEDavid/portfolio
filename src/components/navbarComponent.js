@@ -11,7 +11,7 @@ function Component() {
       <input class="menu-btn" type="checkbox" id="menu-btn" />
       <label class="menu-icon justify-self-end h-5 me-5 mb-5 hover:opacity-50 transition-opacity" for="menu-btn"><span class="navicon top-2"></span></label>
       <ul id="nav_menu" className='font-[Trebuchet_MS] text-white menu w-[500px] justify-items-end grid grid-cols-4 justify-self-end'>
-        <Link to="/"><a href="#"><li className='p-5 inline-block rounded-b hover:text-[--custom_blue] hover:bg-[--custom_lime]'>Home</li></a></Link>
+        <Link to="/"><li className='p-5 inline-block rounded-b hover:text-[--custom_blue] hover:bg-[--custom_lime]'>Home</li></Link>
         <a href="#"><li className='p-5 inline-block rounded-b ml-5 hover:text-[--custom_blue] hover:bg-[--custom_lime]'>Portfolio</li></a>
         <Link to="/blog"><a href="#"><li className='p-5 inline-block rounded-b ml-5 hover:text-[--custom_blue] hover:bg-[--custom_lime]'>Blog</li></a></Link>
         <a href="/#contact_link"><li className='p-5 inline-block rounded-b ml-5 hover:text-[--custom_blue] hover:bg-[--custom_lime]'>Contact</li></a>

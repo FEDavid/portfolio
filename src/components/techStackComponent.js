@@ -1,5 +1,5 @@
 // postComponent.js
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../styles.css';
 
 function Component() {
