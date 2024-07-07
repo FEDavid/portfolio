@@ -15,8 +15,8 @@ const Blog = () => {
         postFiles.map(async (file) => {
           const response = await fetch(file.replace('./', '/posts/'));
           const text = await response.text();
+          console.log(text);
           const content = marked(text);
-          console.log(content);
           return { content, fileName: file.replace('./', '').replace('.md', '') };
         })
       );
