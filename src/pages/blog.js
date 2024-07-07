@@ -16,8 +16,6 @@ const Blog = () => {
             const filePath = file.replace('./', '/posts/');
             const response = await fetch(filePath);
 
-            console.log(filePath, response);
-            
             if (!response.ok) {
               throw new Error(`Failed to fetch ${filePath}`);
             }
@@ -25,7 +23,8 @@ const Blog = () => {
             const text = await response.text();
             const content = marked(text);
 
-            // console.log(text);
+            console.log(filePath);
+            console.log(text);
 
             return { content, fileName: file.replace('./', '').replace('.md', '') };
           })
@@ -34,7 +33,6 @@ const Blog = () => {
         setPosts(postsData);
       } catch (error) {
         console.error('Error fetching posts:', error);
-        // Handle error state if needed
       }
     };
 
