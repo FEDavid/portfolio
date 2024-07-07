@@ -8,7 +8,7 @@ const Blog = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const context = require.context('./posts', false, /\.md$/);
+      const context = require.context('../../public/posts', false, /\.md$/);
       const postFiles = context.keys();
 
       const postsData = await Promise.all(
