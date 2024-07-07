@@ -14,14 +14,13 @@ const Blog = () => {
         const postsData = await Promise.all(
           postFiles.map(async (file) => {
             const filePath = file.replace('./', '/posts/');
-            const response = await fetch(filePath);
+            const response = await fetch(filePath, { cache: 'no-store' });
 
             if (!response.ok) {
               throw new Error(`Failed to fetch ${filePath}`);
             }
 
             const text = await response.text();
-            // Use ReactMarkdown component for rendering the markdown content
             return { content: text, fileName: file.replace('./', '').replace('.md', '') };
           })
         );
