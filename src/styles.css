@@ -311,3 +311,41 @@ html {
     display: none;
   }
 }
+
+/* Blog posts */
+
+.post{
+  h1, h2, h3{
+    color: var(--custom_lime);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  h1{
+    font-size: 2rem;
+    margin-top: -15px;
+    border-bottom: var(--custom_lime) 2px solid;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  h2{
+    font-size: 1.5rem;
+  }
+
+  h3{
+    font-size: 1.25rem;
+  }
+
+  ul, ol{
+    margin-left: 2rem;
+  }
+
+  ul{
+    list-style-type: disc;
+  }
+
+  ol{
+    list-style-type: decimal;
+  }
+}
