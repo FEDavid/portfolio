@@ -8,21 +8,20 @@ const Blog = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const context = require.context('../../public/posts', false, /\.md$/);
+        const context = require.context('/posts', false, /\.md$/);
         const postFiles = context.keys();
 
         const postsData = await Promise.all(
           postFiles.map(async (file) => {
-            const filePath = file.replace('./', '/posts/');
-            const response = await fetch(filePath, { cache: 'no-store' });
+            const response = await fetch(file, { cache: 'no-store' });
 
             if (!response.ok) {
-              throw new Error(`Failed to fetch ${filePath}`);
+              throw new Error(`Failed to fetch ${file}`);
             }
 
             const text = await response.text();
 
-            console.log(filePath, text);
+            console.log(file, text);
 
             return { content: text, fileName: file.replace('./', '').replace('.md', '') };
           })
