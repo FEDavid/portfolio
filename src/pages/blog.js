@@ -21,6 +21,9 @@ const Blog = () => {
             }
 
             const text = await response.text();
+
+            console.log(filePath, text);
+
             return { content: text, fileName: file.replace('./', '').replace('.md', '') };
           })
         );
