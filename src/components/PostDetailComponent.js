@@ -1,4 +1,3 @@
-// PostDetailComponent.js 
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
@@ -11,6 +10,7 @@ const PostDetail = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
+        // Path based on the actual folder structure
         const response = await fetch(`/posts/${filename}.md`, { cache: 'no-store' });
 
         if (response.ok) {
