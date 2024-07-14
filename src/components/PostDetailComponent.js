@@ -10,15 +10,16 @@ const PostDetail = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        // Path based on the actual folder structure
         const response = await fetch(`/posts/${filename}.md`, { cache: 'no-store' });
+        const text = await response.text();
 
-        if (response.ok) {
-          const text = await response.text();
-          setContent(text);
-        } else {
+        if (!response.ok) {
           throw new Error(`Failed to fetch /posts/${filename}.md`);
         }
+
+        console.log(`Fetched /posts/${filename}.md:`, text);  // Debugging log
+
+        setContent(text);
       } catch (error) {
         console.error('Error fetching post:', error);
       }

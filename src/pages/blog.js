@@ -8,20 +8,20 @@ const Blog = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        // Use a relative path for fetching markdown files
         const context = require.context('../../public/posts', false, /\.md$/);
         const postFiles = context.keys();
 
         const postsData = await Promise.all(
           postFiles.map(async (file) => {
-            const filePath = file.replace(/^\.\//, '/posts/');
+            const filePath = `/posts/${file.replace(/^\.\//, '')}`;
             const response = await fetch(filePath, { cache: 'no-store' });
+            const text = await response.text();
 
             if (!response.ok) {
               throw new Error(`Failed to fetch ${filePath}`);
             }
 
-            const text = await response.text();
+            console.log(`Fetched ${filePath}:`, text);  // Debugging log
 
             return { content: text, fileName: file.replace(/^\.\//, '').replace('.md', '') };
           })
