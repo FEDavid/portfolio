@@ -1,3 +1,4 @@
+// Blog.js
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
@@ -8,7 +9,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        // Use a relative path for require.context based on your folder structure
+        // Dynamically require context for markdown files
         const context = require.context('../../public/posts', false, /\.md$/);
         const postFiles = context.keys();
 
