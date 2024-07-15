@@ -1,3 +1,9 @@
+---
+title: My Awesome Post
+dateCreated: 2024-07-15
+author: John Doe
+---
+
 # Test1 Markdown
 
 This is a basic markdown file for testing purposes.
