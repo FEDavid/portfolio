@@ -29,10 +29,10 @@ author: ChatGPT
 
 `Inline code`
 
-    ```python
-    def function():
-        return "Hello, World!"
-    ```
+```python
+def function():
+    return "Hello, World!"
+```
 
 ---
 

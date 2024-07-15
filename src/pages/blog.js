@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import frontMatter from 'front-matter';
 
 const Blog = () => {
@@ -55,40 +58,62 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className='text-white grid custom_pattern_blue'>
-      <div className='px-5 w-full md:w-[60%] md:justify-self-center'>
-        <h1 className='text-5xl text-[--custom_lime] font-bold mb-5'>
+    <div className='text-white grid'>
+      <div className='px-10 w-full md:w-[60%] md:justify-self-center'>
+        <h1 className='text-5xl text-[--custom_lime] font-bold mb-10'>
           <span className='text-white font-extralight'>@</span>Blog
         </h1>
-        {posts.map((post, index) => (
-          <div key={index} className='post mb-5 bg-[--custom_blue_light] rounded-lg'>
-            <div className='post_metadata p-5 bg-[--custom_lime] rounded-t-lg flex justify-between text-[--custom_blue] items-center'>
-              <p className='text-2xl font-bold'>{post.metadata.title || post.fileName}</p>
-              <div>
-                <p className='text-right'>{post.metadata.author ? "By " + post.metadata.author : ""}</p>
-                <p className='text-right whitespace-nowrap'>{post.metadata.dateCreated && post.metadata.dateCreated !== 'Invalid Date' ? "on " + post.metadata.dateCreated : ""}</p>
+        <div className='grid gap-10 mb-10'>
+          {posts.map((post, index) => (
+            <div key={index} className='post bg-[--custom_blue_medium] rounded-lg border-2 border-[--custom_blue_light]'>
+              <div className='post_metadata p-5 bg-[--custom_blue_light] border-b-4 border-[--custom_lime]'>
+                <p className='text-2xl font-bold text-white'>{post.metadata.title || post.fileName}</p>
+                <div className='mt-5 text-[--custom_lime] text-sm text-right'>
+                  <p className='whitespace-nowrap'><span className='font-bold'>{post.metadata.author ? "By " + post.metadata.author : ""}</span>&nbsp;{post.metadata.dateCreated && post.metadata.dateCreated !== 'Invalid Date' ? "on " + post.metadata.dateCreated : ""}</p>
+                </div>
               </div>
-            </div>
-            <div className='p-5'>
-              <div className='mb-5 max-h-96 overflow-hidden'>
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+              <div className='max-h-96 overflow-hidden p-5 relative'>
+                <div className='h-full w-full absolute bg-gradient-to-b from-transparent from-0% via-transparent via-80% to-[--custom_blue_medium] to-100%'></div>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeRaw]}
+                  components={{
+                    code({ node, inline, className, children, ...props }) {
+                      const match = /language-(\w+)/.exec(className || '')
+                      return !inline && match ? (
+                        <SyntaxHighlighter
+                          children={String(children).replace(/\n$/, '')}
+                          style={github}
+                          language={match[1]}
+                          PreTag="div"
+                          {...props}
+                        />
+                      ) : (
+                        <code className={className} {...props}>
+                          {children}
+                        </code>
+                      )
+                    }
+                  }}
+                >
+                  {post.content}
+                </ReactMarkdown>
               </div>
               {post.content.length > 96 && (
-                <div class="text-center mt-4 flex items-center">
-                  <div class="bg-[--custom_lime] h-[1px] grow rounded-lg"></div>
+                <div className="p-5 text-center flex items-center">
+                  <div className="bg-[--custom_lime] h-[1px] grow rounded-lg"></div>
                   <Link
                     className='text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80'
                     to={`/posts/${post.fileName}`}
                   >
-                    Read more - {post.metadata.title || post.fileName}
+                    Read more
                   </Link>
-                  <div class="bg-[--custom_lime] h-[1px] grow rounded-lg"></div>
+                  <div className="bg-[--custom_lime] h-[1px] grow rounded-lg"></div>
                 </div>
-
               )}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -17,29 +17,33 @@ html {
 :root {
     --bg_opacity: 0.6;
     --bg_gradient: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-    --custom_blue: #021117; 
-    --custom_blue_light: #0d5b80;
-    --custom_blue_medium: #09425d;
-    --custom_lime: #D4DE29;
-    --custom_lime_dark: #7f8415;
+    --custom_blue: #021117; /* RGB(2, 17, 23) */
+    --custom_blue_light: #0d5b80; /* RGB(13, 91, 128) */
+    --custom_blue_medium: #073144; /* RGB(7, 49, 68) */
+    --custom_lime: #D4DE29; /* RGB(212, 222, 41) */
+    --custom_lime_dark: #7f8415; /* RGB(127, 132, 21) */
 }
 
 .custom_pattern{
-  background-color: #D4DE29;
+  background-color: var(--custom_blue_light);
   opacity: 1;
-  background-image: radial-gradient(rgba(2, 17, 23, 0.25) 1.1500000000000001px, rgba(212, 222, 41, 1) 1.1500000000000001px);
+  background-image: radial-gradient(rgba(2, 17, 23, 0.25) 1.1500000000000001px, rgba(7,49,68, 1) 1.1500000000000001px);
   background-size: 23px 23px;
 }
 
 .custom_pattern_blue{
-  background-color: #021117;
+  background-color: var(--custom_blue);
   opacity: 1;
-  background-image: radial-gradient(rgba(212, 222, 41, 0.15) 1.1500000000000001px, rgba(2, 17, 23, 1) 1.1500000000000001px);
+  background-image: radial-gradient(rgba(13, 91, 128, 0.15) 1.1500000000000001px, rgba(2, 17, 23, 1) 1.1500000000000001px);
   background-size: 23px 23px;
 }
 
 .custom_gradient {
     background: linear-gradient(90deg, rgba(12,70,98,1) 0%, rgba(13,91,128,1) 100%);
+}
+
+.custom_gradient_dark{
+  background: linear-gradient(90deg, rgba(2,17,23,1) 0%, rgba(3,20,30,1) 100%);
 }
 
 /* Fonts */
@@ -103,7 +107,11 @@ html {
 }
 
 .tech_icons i:hover{
-  background-color: var(--custom_blue_light);
+  background-color: var(--custom_lime);
+  color: var(--custom_blue);
+  span{
+    color: var(--custom_blue);
+  }
 }
 
 @media screen and (max-width: 1200px){
