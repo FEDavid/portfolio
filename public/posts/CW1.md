@@ -24,10 +24,10 @@ Whether you are a freelancer or are looking to establish yourself to seek out a 
 
 <br>
 <div class="img_gallery_container grid grid-cols-2">
-  <div><img src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture5.png" alt="GitHub page example" title="GitHub page example"/></div>
-  <div><img src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture4.png" alt="ArtStation page example" title="ArtStation page example"/></div>
-  <div><img src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture3.png" alt="Soundcloud page example" title="Soundcloud page example"/></div>
-  <div><img src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture2.png" alt="Website page example" title="Website page example"/></div>
+  <div><img class="object-cover h-full w-full" src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture5.png" alt="GitHub page example" title="GitHub page example"/></div>
+  <div><img class="object-cover h-full w-full" src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture4.png" alt="ArtStation page example" title="ArtStation page example"/></div>
+  <div><img class="object-cover h-full w-full" src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture3.png" alt="Soundcloud page example" title="Soundcloud page example"/></div>
+  <div><img class="object-cover h-full w-full" src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture2.png" alt="Website page example" title="Website page example"/></div>
 </div>
 <br>
 
@@ -35,7 +35,7 @@ Whether you are a freelancer or are looking to establish yourself to seek out a 
 To cite from research performed by Dr Gavin Baxter, a question asked "participants were asked to rate the effectiveness of online delivery mechanisms for showcasing their work to prospective employers":
 
 <p align="center" style="margin: 25px 0 15px 0">
-<img src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture1.png" alt="Table showing skill relavancy">
+<img class="w-full" src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture1.png" alt="Table showing skill relavancy">
 <br><em>Figure 5 - Image of research results</em>
 </p>
 
