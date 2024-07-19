@@ -29,6 +29,7 @@ img, picture, svg, video {
     --bg_gradient: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     --custom_blue: #021117; /* RGB(2, 17, 23) */
     --custom_blue_light: #0d5b80; /* RGB(13, 91, 128) */
+    --custom_blue_lighter: #17a6e8; /* RGB(23, 166, 232) */
     --custom_blue_medium: #073144; /* RGB(7, 49, 68) */
     --custom_lime: #D4DE29; /* RGB(212, 222, 41) */
     --custom_lime_dark: #7f8415; /* RGB(127, 132, 21) */
