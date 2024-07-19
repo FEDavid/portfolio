@@ -58,22 +58,22 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className='text-white'>
-      <div className='w-full md:w-[60%] md:justify-self-center px-10'>
-        <h1 className='text-5xl text-[--custom_lime] font-bold mb-10'>
-          <span className='text-white font-extralight'>@</span>Blog
+    <div className="overflow-x-hidden text-white grid">
+      <div className="w-full md:w-[60%] md:justify-self-center px-4 md:px-10">
+        <h1 className="text-5xl text-[--custom_lime] font-bold mb-10">
+          <span className="text-white font-extralight">@</span>Blog
         </h1>
-        <div className='grid gap-10 mb-10 w-full'>
+        <div className="grid gap-10 mb-10 w-full">
           {posts.map((post, index) => (
-            <div key={index} className='post bg-[--custom_blue_medium] rounded-lg border-2 border-[--custom_blue_light]'>
-              <div className='post_metadata p-5 bg-[--custom_blue_light] border-b-4 border-[--custom_lime]'>
-                <p className='text-2xl font-bold text-white'>{post.metadata.title || post.fileName}</p>
-                <div className='mt-5 text-[--custom_lime] text-sm text-right'>
-                  <p className='whitespace-nowrap'><span className='font-bold'>{post.metadata.author ? "By " + post.metadata.author : ""}</span>&nbsp;{post.metadata.dateCreated && post.metadata.dateCreated !== 'Invalid Date' ? "on " + post.metadata.dateCreated : ""}</p>
+            <div key={index} className="post bg-[--custom_blue_medium] rounded-lg border-2 border-[--custom_blue_light]">
+              <div className="post_metadata p-5 bg-[--custom_blue_light] border-b-4 border-[--custom_lime]">
+                <p className="text-2xl font-bold text-white">{post.metadata.title || post.fileName}</p>
+                <div className="mt-5 text-[--custom_lime] text-sm text-right">
+                  <p className="whitespace-nowrap"><span className="font-bold">{post.metadata.author ? "By " + post.metadata.author : ""}</span>&nbsp;{post.metadata.dateCreated && post.metadata.dateCreated !== 'Invalid Date' ? "on " + post.metadata.dateCreated : ""}</p>
                 </div>
               </div>
-              <div className='max-h-96 overflow-hidden p-5 relative'>
-                <div className='h-full w-full absolute bg-gradient-to-b from-transparent from-0% via-transparent via-80% to-[--custom_blue_medium] to-100%'></div>
+              <div className="max-h-96 overflow-hidden p-5 relative">
+                <div className="h-full w-full absolute bg-gradient-to-b from-transparent from-0% via-transparent via-80% to-[--custom_blue_medium] to-100%"></div>
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeRaw]}
@@ -103,7 +103,7 @@ const Blog = () => {
                 <div className="p-5 text-center flex items-center">
                   <div className="bg-[--custom_lime] h-[1px] grow rounded-lg"></div>
                   <Link
-                    className='text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80'
+                    className="text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80"
                     to={`/posts/${post.fileName}`}
                   >
                     Read more
