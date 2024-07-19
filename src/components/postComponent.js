@@ -15,7 +15,7 @@ function Component(props) {
         <p className='mt-4 opacity-80 h-[100px] text-ellipsis overflow-hidden line-clamp-4 transition-opacity'>{props.content}</p>
         <div className='mt-6 flex text-sm text-[--custom_blue] gap-4 flex-wrap'>
           {props.stack.map((item, index) => (
-            <p key={index} className='px-3 pb-0.5 bg-[--custom_lime] rounded-3xl hover:opacity-80 transition-opacity'>
+            <p key={index} className='px-3 bg-[--custom_lime] rounded-3xl hover:opacity-80 transition-opacity'>
               {item}
             </p>
           ))}
