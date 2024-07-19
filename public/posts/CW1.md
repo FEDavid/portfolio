@@ -23,7 +23,7 @@ Whether you are a freelancer or are looking to establish yourself to seek out a 
   This does however come with some caveats as you not only need to market/advertise the website, whether you do this with online ads or in person networking but convince any potential clients or employers to look at your site. While most (looking at the below research we will look at in a moment) do not have a problem with this, in my opinion you will still be required to utilize some of the other platforms as having your own personal website alone will not be sufficient.
 
 <br>
-<div class="img_gallery_container grid grid-cols-2">
+<div class="img_gallery_container grid grid-cols-2 w-full">
   <div><img class="object-cover h-full w-full" src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture5.png" alt="GitHub page example" title="GitHub page example"/></div>
   <div><img class="object-cover h-full w-full" src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture4.png" alt="ArtStation page example" title="ArtStation page example"/></div>
   <div><img class="object-cover h-full w-full" src="https://raw.githubusercontent.com/FEDavid/Blog/main/_posts/2023-10-06-CW1/Picture3.png" alt="Soundcloud page example" title="Soundcloud page example"/></div>

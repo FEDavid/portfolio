@@ -21,9 +21,9 @@ One of, if not the most famous case of IP rights is Winklevoss twins V Zuckerber
 
 However, after years of litigation and meetings, Facebook (Zuckerberg) eventually settled for nearly $20 million dollars with ConnectU (Winklevoss twins). Although what appeared to be a small idea between University students at the time, lead to a legal case worth millions and a company now worth billions. 
 
-<p>
+<p class="w-full">
   <br><br>
-  <iframe style="width: 100%;" height="350" src="https://www.youtube.com/embed/4BjIOOrjUBk?si=kKi1FDybwekRrlOV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe style="width: 100%;" src="https://www.youtube.com/embed/4BjIOOrjUBk?si=kKi1FDybwekRrlOV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </p>
 
 ## Does IP stifle creativity in the creative industries? My views on IP rights and copyright.

@@ -58,12 +58,12 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className='text-white grid'>
-      <div className='px-10 w-full md:w-[60%] md:justify-self-center'>
+    <div className='text-white'>
+      <div className='w-full md:w-[60%] md:justify-self-center px-10'>
         <h1 className='text-5xl text-[--custom_lime] font-bold mb-10'>
           <span className='text-white font-extralight'>@</span>Blog
         </h1>
-        <div className='grid gap-10 mb-10'>
+        <div className='grid gap-10 mb-10 w-full'>
           {posts.map((post, index) => (
             <div key={index} className='post bg-[--custom_blue_medium] rounded-lg border-2 border-[--custom_blue_light]'>
               <div className='post_metadata p-5 bg-[--custom_blue_light] border-b-4 border-[--custom_lime]'>

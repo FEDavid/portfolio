@@ -15,7 +15,7 @@ import PostDetail from './components/PostDetailComponent.js';
 
 function App() {
   return (
-    <div className='grid grid-rows-[auto_1fr_auto] min-h-screen'>
+    <div className='grid grid-rows-[auto_1fr_auto] min-h-screen min-w-full'>
       <Router>
         <ScrollToTop />
         <div>
