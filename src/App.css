@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw; /* Ensure body doesn't overflow */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

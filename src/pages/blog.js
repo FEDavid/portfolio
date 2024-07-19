@@ -65,7 +65,7 @@ const Blog = () => {
         </h1>
         <div className="grid gap-10 mb-10 w-full">
           {posts.map((post, index) => (
-            <div key={index} className="post bg-[--custom_blue_medium] rounded-lg border-2 border-[--custom_blue_light]">
+            <div key={index} className="post bg-[--custom_blue_medium] rounded-lg border-2 border-[--custom_blue_light] overflow-hidden">
               <div className="post_metadata p-5 bg-[--custom_blue_light] border-b-4 border-[--custom_lime]">
                 <p className="text-2xl font-bold text-white">{post.metadata.title || post.fileName}</p>
                 <div className="mt-5 text-[--custom_lime] text-sm text-right">

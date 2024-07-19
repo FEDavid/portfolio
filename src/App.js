@@ -10,13 +10,13 @@ import PostDetail from './components/PostDetailComponent.js';
 
 function App() {
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] min-h-screen max-w-full overflow-x-hidden">
+    <div className="grid grid-rows-[auto_1fr_auto] min-h-screen max-w-full">
       <Router>
         <ScrollToTop />
         <div>
           <Navbar />
         </div>
-        <div>
+        <div className="w-full">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
