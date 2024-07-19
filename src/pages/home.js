@@ -5,7 +5,7 @@ import MainComponent from '../components/mainComponent'; // Importing the Portfo
 
 function Home() {
     return (
-        <div className="App w-full grid grid-rows-[auto,8fr,1fr,auto]">
+        <div className="App w-full grid grid-rows-[auto,8fr,1fr,auto] mt-5">
             <MainComponent /> {/* Using the MainComponent component */}
         </div>
     );

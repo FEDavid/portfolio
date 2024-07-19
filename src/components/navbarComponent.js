@@ -14,7 +14,7 @@ function Component() {
   };
 
   return (
-    <div className="h-min self-start grid grid-cols-2 justify-between items-center header mb-5 bg-[--custom_blue_light] md:bg-transparent">
+    <div className="h-min self-start grid grid-cols-2 justify-between items-center header bg-[--custom_blue_light] md:bg-transparent">
       <h2 className="font-[Trebuchet_MS] text-3xl w-min whitespace-nowrap text-white mr-5 select-none ms-5 pb-5 md:pb-0">david-mould.<span className='font-black'>DEV</span></h2>
       <input className="menu-btn" type="checkbox" id="menu-btn" ref={menuBtnRef} /> {/* Use ref here */}
       <label className="menu-icon justify-self-end h-5 me-5 mb-5 hover:opacity-50 transition-opacity" htmlFor="menu-btn">

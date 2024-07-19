@@ -60,10 +60,10 @@ const Blog = () => {
   return (
     <div className="overflow-x-hidden text-white grid">
       <div className="w-full md:w-[60%] md:justify-self-center px-4 md:px-10">
-        <h1 className="text-5xl text-[--custom_lime] font-bold mb-10">
+        <h1 className="text-5xl text-[--custom_lime] font-bold my-4 pb-4 leading-8">
           <span className="text-white font-extralight">@</span>Blog
         </h1>
-        <div className="grid gap-10 mb-10 w-full">
+        <div className="grid gap-4 mb-4 w-full">
           {posts.map((post, index) => (
             <div key={index} className="post bg-[--custom_blue_medium] rounded-lg border-2 border-[--custom_blue_light] overflow-hidden">
               <div className="post_metadata p-5 bg-[--custom_blue_light] border-b-4 border-[--custom_lime]">
