@@ -60,7 +60,7 @@ const Blog = () => {
   return (
     <div className="overflow-x-hidden text-white grid">
       <div className="w-full md:w-[60%] md:justify-self-center px-4 md:px-10">
-        <h1 className="text-5xl text-[--custom_lime] font-bold mt-10 mb-8">
+        <h1 className="text-5xl text-[--custom_lime] font-bold my-8">
           <span className="text-[--custom_blue_lighter] font-extralight">@</span>Blog
         </h1>
         <div className="grid gap-4 mb-4 w-full">
