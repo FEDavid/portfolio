@@ -3,6 +3,7 @@ title: Markdown Cheatsheet
 dateCreated: 2024-07-15
 author: ChatGPT
 ---
+<br>
 
 # Heading 1
 ## Heading 2

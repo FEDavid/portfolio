@@ -60,20 +60,20 @@ const Blog = () => {
   return (
     <div className="overflow-x-hidden text-white grid">
       <div className="w-full md:w-[60%] md:justify-self-center px-4 md:px-10">
-        <h1 className="text-5xl text-[--custom_lime] font-bold mt-4 mb-6">
+        <h1 className="text-5xl text-[--custom_lime] font-bold mt-6 mb-4 px-2">
           <span className="text-[--custom_blue_lighter] font-extralight">@</span>Blog
         </h1>
         <div className="grid gap-4 mb-4 w-full">
           {posts.map((post, index) => (
-            <div key={index} className="post bg-[--custom_blue_medium] rounded-lg border-2 border-[--custom_blue_light] overflow-hidden">
-              <div className="post_metadata p-5 bg-[--custom_blue_light] border-b-4 border-[--custom_lime]">
+            <div key={index} className="post rounded-lg overflow-hidden p-4">
+              <div className="post_metadata pb-4 border-b-4 border-[--custom_blue_lighter]">
                 <p className="text-2xl font-bold text-white">{post.metadata.title || post.fileName}</p>
-                <div className="mt-5 text-[--custom_lime] text-sm text-right">
+                <div className="text-[--custom_lime] text-sm mt-2">
                   <p className="whitespace-nowrap"><span className="font-bold">{post.metadata.author ? "By " + post.metadata.author : ""}</span>&nbsp;{post.metadata.dateCreated && post.metadata.dateCreated !== 'Invalid Date' ? "on " + post.metadata.dateCreated : ""}</p>
                 </div>
               </div>
-              <div className="max-h-96 overflow-hidden p-5 relative">
-                <div className="h-full w-full absolute bg-gradient-to-b from-transparent from-0% via-transparent via-80% to-[--custom_blue_medium] to-100%"></div>
+              <div className="max-h-96 overflow-hidden relative">
+                <div className="h-full w-full absolute bg-gradient-to-b from-transparent from-0% via-transparent via-80% to-[--custom_blue] to-100%"></div>
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeRaw]}
@@ -100,7 +100,7 @@ const Blog = () => {
                 </ReactMarkdown>
               </div>
               {post.content.length > 96 && (
-                <div className="p-5 text-center flex items-center">
+                <div className="p-4 text-center flex items-center">
                   <div className="bg-[--custom_lime] h-[1px] grow rounded-lg"></div>
                   <Link
                     className="text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80"

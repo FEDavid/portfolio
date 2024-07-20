@@ -48,7 +48,7 @@ const PostDetail = () => {
   }, [filename]);
 
   return (
-    <div className='grid'>
+    <div className='grid mt-4'>
       <div className='text-white post md:m-5 mt-0 md:rounded-lg justify-self-center w-full md:w-[60%]'>
         <div className='post_metadata p-5 bg-[--custom_blue_light] md:rounded-t-lg border-b-4 border-[--custom_lime]'>
           <p className='text-2xl font-bold text-white'>{metadata.title || filename || "Post"}</p>
