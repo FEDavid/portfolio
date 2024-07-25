@@ -100,7 +100,7 @@ const Blog = () => {
                 </ReactMarkdown>
               </div>
               {post.content.length > 96 && (
-                <div className="p-4 text-center flex items-center">
+                <div className="py-4 text-center flex items-center">
                   <div className="bg-[--custom_lime] h-[1px] grow rounded-lg"></div>
                   <Link
                     className="text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80"
