@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import '../styles.css';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function Component() {
   // Reference to the menu-btn checkbox
@@ -13,9 +14,16 @@ function Component() {
     }
   };
 
+  const location = useLocation();
+
+  function getPageTitle() {
+    const path = location.pathname;
+    return path.split('/')[1] || 'home';
+  }
+
   return (
     <div className="h-min self-start grid grid-cols-2 justify-between items-center header bg-[--custom_blue_light] md:bg-transparent">
-      <h2 className="font-[Trebuchet_MS] text-3xl w-min whitespace-nowrap text-white mr-5 select-none ms-5 pb-5 md:pb-0">david-mould.<span className='font-black'>DEV</span></h2>
+      <h2 className="font-[Trebuchet_MS] text-2xl w-min whitespace-nowrap text-white mr-5 select-none ms-5 pb-5 md:pb-0 flex">david-mould.<span className='font-black'>DEV</span><span className='text-[--custom_lime] ms-2 text-xl'>/</span><span className='ms-2 text-xl self-end top-[-2px] relative'>{getPageTitle()}</span></h2>
       <input className="menu-btn" type="checkbox" id="menu-btn" ref={menuBtnRef} /> {/* Use ref here */}
       <label className="menu-icon justify-self-end h-5 me-5 mb-5 hover:opacity-50 transition-opacity" htmlFor="menu-btn">
         <span className="navicon top-2"></span>
