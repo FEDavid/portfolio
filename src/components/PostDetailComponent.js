@@ -51,8 +51,8 @@ const PostDetail = () => {
     <div className='grid mt-4'>
       <div className='text-white post md:m-5 mt-0 md:rounded-lg justify-self-center w-full md:w-[60%]'>
         <div className='post_metadata p-5 bg-[--custom_blue_light] md:rounded-t-lg border-b-4 border-[--custom_lime] flex justify-between flex-col sm:flex-row'>
-          <p className='text-2xl font-bold text-white whitespace-nowrap'>{metadata.title || filename || "Post"}</p>
-          <div className='text-[--custom_lime] text-sm flex gap-1 mt-2 sm:mt-0 sm:text-right sm:block'>
+          <p className='text-2xl font-bold text-white'>{metadata.title || filename || "Post"}</p>
+          <div className='text-[--custom_lime] text-sm flex gap-1 mt-2 sm:mt-0 sm:text-right sm:block sm:self-center'>
             <p className='font-bold'>{metadata.author ? "By " + metadata.author : ""}</p>
             <p className='whitespace-nowrap'>{metadata.dateCreated && metadata.dateCreated !== 'Invalid Date' ? "on " + metadata.dateCreated : ""}</p>
           </div>
