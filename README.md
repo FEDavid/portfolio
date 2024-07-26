@@ -25,3 +25,7 @@ On the other hand, **Tailwind CSS** is a highly customizable, low-level CSS fram
 ## The Perfect Combination
 
 Together, these technologies offer a robust foundation for creating a dynamic and visually appealing portfolio. **React**'s component-based architecture pairs perfectly with **Tailwind**'s utility-first approach, enabling me to develop a responsive and modern user interface with minimal effort. This combination not only enhances the development workflow but also ensures a high-quality user experience.
+
+## Updates!
+
+26/07/2024 - Let's go public! I am now confident I have made enough progress and changes to release the repo publicly and deploy my portfolio fully! Any feedback? Please let me know!
