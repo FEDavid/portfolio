@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
+// Import React Markdown and other required libraries
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
@@ -59,7 +61,7 @@ const Blog = () => {
 
   return (
     <div className="overflow-x-hidden text-white grid">
-      <div className="w-full md:w-[60%] md:justify-self-center px-4 md:px-10">
+      <div className="w-full md:w-[60%] md:justify-self-center mt-4 px-4 md:px-10">
         <div className="grid gap-4 mb-4 w-full">
           {posts.map((post, index) => (
             <div key={index} className="post rounded-lg overflow-hidden p-4">

@@ -24,6 +24,12 @@ img, picture, svg, video {
   height: auto;
 }
 
+html, body {
+  min-width: 360px; /* Set your desired minimum width */
+  overflow-x: auto; /* Allow horizontal scrolling if content exceeds the viewport width */
+}
+
+
 :root {
     --bg_opacity: 0.6;
     --bg_gradient: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
