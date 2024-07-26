@@ -88,7 +88,7 @@ function Component() {
       <TechStackComponent />
       <div className='grid pt-8 gap-8 custom_pattern_blue xl:grid-cols-[29%_29%] justify-center'>
         <PostComponent thumbnail = {react_portfolio_thumbnail} title="React/Tailwind portfolio site" content={postText3} stack={["HTML5", "React", "JS", "Tailwind", "CSS3"]} link="https://github.com/FEDavid/portfolio"/>
-        <PostComponent thumbnail = {flask_weather_thumbnail} title="Flask weather web application" content={postText1} stack={["Python", "Flask", "HTML5", "CSS3"]} link="https://github.com/FEDavid/Basic_weather"/>
+        <PostComponent thumbnail = {flask_weather_thumbnail} title="Flask weather web application" content={postText1} stack={["Python", "Flask", "HTML5", "CSS3"]} link="https://github.com/FEDavid/flask-weather"/>
         <PostComponent thumbnail = {php_ticket_thumbnail} title="PHP ticket web application" content={postText2} stack={["PHP", "MySQL", "HTML5", "CSS3"]} link="https://github.com/FEDavid/PHP-ticket_system"/>
       </div>
       <QuickContactsComponent />
