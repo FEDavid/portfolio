@@ -28,4 +28,5 @@ Together, these technologies offer a robust foundation for creating a dynamic an
 
 ## Updates!
 
-26/07/2024 - Let's go public! I am now confident I have made enough progress and changes to release the repo publicly and deploy my portfolio fully! Any feedback? Please let me know!
+- ## 26/07/2024
+  - Let's go public! I am now confident I have made enough progress and changes to release the repo publicly and deploy my portfolio fully! Any feedback? Please let me know!
