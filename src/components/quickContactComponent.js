@@ -30,7 +30,7 @@ function Component() {
   };
 
   return (
-    <div id="contact_link" className="bg-[--custom_blue] custom_pattern_blue grid pt-0 lg:pt-4">
+    <div id="contact_link" className="bg-[--custom_blue] custom_pattern_blue grid">
       <div className='py-8 grid w-[60%] justify-self-center lg:grid-cols-2'>
         <div className='w-auto'>
           {/* <h2 className="text-xl font-bold lg:text-3xl text-[--custom_lime]"><span className='lg:text-3xl text-base relative bottom-[3px] font-extralight tracking-tighter me-1 lg:me-2'>//</span>Want to get in touch?</h2> */}
