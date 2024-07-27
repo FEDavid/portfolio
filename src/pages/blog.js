@@ -61,17 +61,17 @@ const Blog = () => {
 
   return (
     <div className="overflow-x-hidden text-white grid">
-      <div className="w-full md:w-[60%] md:justify-self-center mt-4 px-4 md:px-10">
-        <div className="grid gap-4 mb-4 w-full">
+      <div className="w-full md:w-[60%] md:justify-self-center mt-8 px-4 md:px-10">
+        <div className="grid gap-8 w-full mb-10 grid-cols-1 lg:grid-cols-2">
           {posts.map((post, index) => (
-            <div key={index} className="post rounded-lg overflow-hidden p-4">
-              <div className="post_metadata pb-4 border-b-4 border-[--custom_blue_lighter]">
+            <div key={index} className="post px-4 grid content-between">
+              <div className="post_metadata py-4 border-t-4 border-[--custom_lime]">
                 <p className="text-2xl font-bold text-white">{post.metadata.title || post.fileName}</p>
                 <div className="text-[--custom_lime] text-sm mt-2">
                   <p className="whitespace-nowrap"><span className="font-bold">{post.metadata.author ? "By " + post.metadata.author : ""}</span>&nbsp;{post.metadata.dateCreated && post.metadata.dateCreated !== 'Invalid Date' ? "on " + post.metadata.dateCreated : ""}</p>
                 </div>
               </div>
-              <div className="max-h-96 overflow-hidden relative">
+              {/* <div className="max-h-96 overflow-hidden relative">
                 <div className="h-full w-full absolute bg-gradient-to-b from-transparent from-0% via-transparent via-80% to-[--custom_blue] to-100%"></div>
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
@@ -109,7 +109,15 @@ const Blog = () => {
                   </Link>
                   <div className="bg-[--custom_lime] h-[1px] grow rounded-lg"></div>
                 </div>
-              )}
+              )} */}
+              <div className="text-center flex items-center">
+                <Link
+                  className="text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80"
+                  to={`/posts/${post.fileName}`}
+                >
+                  Read post
+                </Link>
+              </div>
             </div>
           ))}
         </div>
