@@ -62,7 +62,7 @@ const Blog = () => {
   return (
     <div className="overflow-x-hidden text-white grid">
       <div className="w-full md:w-[60%] md:justify-self-center mt-8 px-4 md:px-10">
-        <div className="grid gap-8 w-full mb-10 grid-cols-1 lg:grid-cols-2">
+        <div className="grid gap-8 w-full mb-10 grid-cols-1 xl:grid-cols-2">
           {posts.map((post, index) => (
             <div key={index} className="post px-4 grid content-between">
               <div className="post_metadata py-4 border-t-4 border-[--custom_lime]">
@@ -110,13 +110,18 @@ const Blog = () => {
                   <div className="bg-[--custom_lime] h-[1px] grow rounded-lg"></div>
                 </div>
               )} */}
-              <div className="text-center flex items-center">
+              <div className="text-center flex justify-between">
                 <Link
-                  className="text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80"
+                  className="text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80 min-w-fit"
                   to={`/posts/${post.fileName}`}
                 >
                   Read post
                 </Link>
+                <ul className='blog_tags flex gap-4 overflow-x-hidden items-center'>
+                  <li className='list-none px-4 bg-[--custom_blue_light] rounded-full min-w-fit text-sm'>Tags</li>
+                  <li className='list-none px-4 bg-[--custom_blue_light] rounded-full min-w-fit text-sm'>Tags 2</li>
+                  <li className='list-none px-4 bg-[--custom_blue_light] rounded-full min-w-fit text-sm'>Tags 3</li>
+                </ul>
               </div>
             </div>
           ))}
