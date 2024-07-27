@@ -26,6 +26,8 @@ function Component() {
   const [postText1, setPostText1] = useState('');
   const [postText2, setPostText2] = useState('');
   const [postText3, setPostText3] = useState('');
+
+  const cp_component = <SocialIcon bgColor="#D4DE29" fgColor="#021117" url="https://codepen.io/FEDavid" />
   const gh_component = <SocialIcon bgColor="#D4DE29" fgColor="#021117" url="https://github.com/FEDavid" />
   const li_component = <SocialIcon bgColor="#D4DE29" fgColor="#021117" url="https://www.linkedin.com/in/david-t-mould/" />
   const lt_component = <SocialIcon bgColor="#D4DE29" fgColor="#021117" url="https://linktr.ee/dmould" />
@@ -71,10 +73,11 @@ function Component() {
             <h3 id="sub_heading" className="text-2xl text-white dm-sans-regular-font tracking-tighter whitespace-nowrap [text-shadow: 6px 6px 9px rgba(0,0,0,0.3);]">BSC(Hons) Web and Mobile Development student</h3>
           </section>
           <div id="bottom_content" class="self-end w-1/2 bg-[rgba(2,17,23,0.75)] p-5">
-            <ul id="socials" class="mb-10">
-              <li class="inline-block">{gh_component}</li>
-              <li class="inline-block mx-5">{li_component}</li>
-              <li class="inline-block">{lt_component}</li>
+            <ul id="socials" class="mb-10 flex gap-4 justify-center">
+              <li class="">{gh_component}</li>
+              <li class="">{li_component}</li>
+              <li class="">{cp_component}</li>
+              <li class="">{lt_component}</li>
             </ul>
             <pre id="about_txt" style={{whiteSpace: 'pre-wrap'}} class="self-end pt-10 text-left text-pretty font-sans font-medium md:border-t">
               <h1 class="text-4xl font-semibold tracking-wide text-[--custom_lime] mb-5 align-text-top dm-sans-regular-font"><span className=' text-3xl relative bottom-[3px] font-bold tracking-widest opacity-30 me-[-2px]'>//</span>About me</h1>
