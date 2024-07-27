@@ -18,12 +18,23 @@ function Component() {
         <li class="inline-block mx-2">{li_component}</li>
         <li class="inline-block">{lt_component}</li>
       </ul> */}
-      
+
       <Link to="/sitemap" className='hover:opacity-50 transition-opacity flex gap-1 dm-sans-regular-font text-base'>
-        <span class="material-symbols-outlined self-center">map</span>
-        <p className='relative'>Sitemap</p>
+        <svg width="30" height="30" viewBox="0 0 300 400">
+          <defs>
+            <mask id="mask_btm">
+              <rect width="280" height="85" fill="white" x="10" y="190" />
+            </mask>
+          </defs>
+          <rect width="40" height="150" x="130" y="125" fill="black" />
+          <rect width="250" height="100" rx="40" ry="40" fill="none" stroke-width="50" stroke="black" x="25" y="200" mask="url(#mask_btm)" />
+          <rect rx="20" ry="20" width="100" height="100" fill="black" x="100" y="25" />
+          <rect rx="20" ry="20" width="100" height="100" fill="black" x="100" y="275" />
+          <rect rx="20" ry="20" width="100" height="100" fill="black" transform="translate(-25, 275)" />
+          <rect rx="20" ry="20" width="100" height="100" fill="black" transform="translate(225, 275)" />
+        </svg>
       </Link>
-      
+
     </div>
   );
 }
