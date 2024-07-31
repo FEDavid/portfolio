@@ -112,12 +112,12 @@ const Blog = () => {
               )} */}
               <div className="text-center flex justify-between">
                 <Link
-                  className="text-[--custom_blue] bg-[--custom_lime] py-1 px-5 rounded-full transition-opacity hover:opacity-80 min-w-fit"
+                  className="text-[--custom_blue] bg-[--custom_lime] py-2 px-6 font-semibold rounded-full transition-opacity hover:opacity-80 min-w-fit"
                   to={`/posts/${post.fileName}`}
                 >
                   Read post
                 </Link>
-                <ul className='blog_tags flex gap-4 overflow-x-hidden items-center'>
+                <ul className='blog_tags flex gap-4 overflow-x-scroll items-start'>
                   <li className='list-none px-4 bg-[--custom_blue_light] rounded-full min-w-fit text-sm'>Tags</li>
                   <li className='list-none px-4 bg-[--custom_blue_light] rounded-full min-w-fit text-sm'>Tags 2</li>
                   <li className='list-none px-4 bg-[--custom_blue_light] rounded-full min-w-fit text-sm'>Tags 3</li>
