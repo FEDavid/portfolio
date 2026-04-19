@@ -19,13 +19,12 @@ export default function Hero() {
 
                     <hr className="mt-4 md:mt-0 text-[var(--theme-highlight)]" />
 
-                    <p className="mt-6 text-2xl text-[var(--theme-light)] font-medium">
+                    <p className="mt-6 text-2xl text-[var(--theme-light)] font-medium whitespace-nowrap">
                         Full Stack Developer
                     </p>
 
                     <p className="mt-1 text-neutral-400 max-w-md leading-relaxed">
-                        Building modern web applications with clean architecture
-                        and scalable systems.
+                        Building full applications from front-end to backend, focusing on making things clear, usable, and well put together.
                     </p>
 
                     <div className="mt-8 flex gap-4 flex-col lg:flex-row">
