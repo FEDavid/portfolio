@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./animate.css";
+@import "./hamburger.css";
 
 * {
   box-sizing: border-box;
@@ -14,6 +15,7 @@
   --theme-primary: #2a4d7a;
   --theme-light: #6792cb;
   --theme-bright: #b3c9e5;
+  --theme-highlight: #f49325;
 }
 
 @theme inline {

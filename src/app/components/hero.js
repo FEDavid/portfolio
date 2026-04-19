@@ -17,7 +17,7 @@ export default function Hero() {
                         David
                     </h1>
 
-                    <hr className="mt-4 md:mt-0 text-[var(--theme-primary)]" />
+                    <hr className="mt-4 md:mt-0 text-[var(--theme-highlight)]" />
 
                     <p className="mt-6 text-2xl text-[var(--theme-light)] font-medium">
                         Full Stack Developer

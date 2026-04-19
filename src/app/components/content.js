@@ -1,8 +1,12 @@
 // Import components
 import Post from "./reusable/post";
 
-export default function Content() {
+// Import utils
+import getPosts from "../utils/posts";
 
+export default async function Content() {
+
+  // Manually add projects and pass details as props to component
   const projects = [
     {
       title: "PHP ticket web application",
@@ -30,24 +34,44 @@ export default function Content() {
     }
   ];
 
+  // Use getPosts to pull posts from DEV.to API
+  const posts = await getPosts();
+
   return (
-    <section id="content" className="p-6 md:p-24 justify-center items-center w-full bg-[var(--theme-darkest)] flex flex-col gap-12">
+    <section id="content" className="px-6 py-12 md:py-24 justify-center items-center w-full bg-[var(--theme-darkest)] flex flex-col gap-12">
 
       {/* content */}
       <div className="max-w-6xl w-full flex flex-col justify-self-center gap-6 md:gap-12">
-        <h2 className="text-4xl md:text-7xl font-bold ml-5"><span className="text-[var(--theme-light)] mr-0.5">.</span>Projects</h2>
         {/* Projects */}
+        <h2 className="text-4xl md:text-7xl font-bold ml-5"><span className="text-[var(--theme-light)] mr-0.5">.</span>Projects</h2>
         <div className="flex flex-col justify-self-center gap-12">
+          {/* Map over projects */}
           {projects.map((project, index) => (
-            <Post 
-              key={index} 
-              title={project.title} 
-              description={project.description} 
-              link={project.link} 
-              category={project.category} 
-              anchor={project.anchor} 
-              image={project.image} 
-              />
+            <Post
+              key={index}
+              title={project.title}
+              description={project.description}
+              link={project.link}
+              category={project.category}
+              anchor={project.anchor}
+              image={project.image}
+            />
+          ))}
+        </div>
+
+        {/* Map over posts */}
+        <h2 id="posts" className="text-4xl md:text-7xl font-bold ml-5 mt-6"><span className="text-[var(--theme-light)] mr-0.5">.</span>Posts</h2>
+        <div className="flex flex-col justify-self-center gap-12">
+          {posts.map((post, index) => (
+            <Post
+              key={index}
+              title={post.title}
+              description={post.description}
+              link={post.url}
+              category={"Post"}
+              anchor={post.slug}
+              image={post.cover_image}
+            />
           ))}
         </div>
       </div>

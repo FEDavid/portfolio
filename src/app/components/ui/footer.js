@@ -20,7 +20,7 @@ export default function Footer() {
 
   return (
     <footer id="footer" className="flex flex-col items-center bg-[#0d0d0d] px-6 md:px-12">
-      <div className="max-w-6xl w-full py-6 md:py-12 flex flex-col md:flex-row justify-between gap-6 md:gap-0">
+      <div className="max-w-6xl w-full pt-6 md:py-12 flex flex-col md:flex-row justify-between gap-6 md:gap-0">
         {/* Column 1 */}
         <div className="text-center md:text-left">
           <p className="font-funnel text-xl whitespace-nowrap">david-mould.<span className="font-[1000] text-[var(--theme-light)]">dev</span></p>
@@ -38,8 +38,9 @@ export default function Footer() {
         <div className="flex flex-col gap-0.5 md:gap-2 md:text-left text-center">
           <p className="text-sm tracking-widest text-neutral-500">More about me</p>
           <a href="#hero" className="text-sm text-neutral-400 hover:text-[var(--theme-light)] transition-colors">Home</a>
+          <a href="#about" className="text-sm text-neutral-400 hover:text-[var(--theme-light)] transition-colors">About Me</a>
           <a href="#content" className="text-sm text-neutral-400 hover:text-[var(--theme-light)] transition-colors">Projects</a>
-          <a href="#hero" className="text-sm text-neutral-400 hover:text-[var(--theme-light)] transition-colors">About Me</a>
+          <a href="#posts" className="text-sm text-neutral-400 hover:text-[var(--theme-light)] transition-colors">Posts</a>
         </div>
 
         {/* Column 4 */}
