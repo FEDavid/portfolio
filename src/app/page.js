@@ -1,7 +1,14 @@
+// Import components
+import Hero from "../app/components/hero"
+import Content from "../app/components/content"
+import Stack from "../app/components/stack"
+
 export default function Home() {
   return (
-    <main className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <p>content</p>
+    <main className="flex flex-col flex-1 font-sans">
+      <Hero />
+      <Stack />
+      <Content />
     </main>
   );
 }

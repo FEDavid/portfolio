@@ -1,18 +1,30 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+// Import CSS
+import "../app/css/globals.css";
+
+// Import fonts
+import { Geist, Geist_Mono, Funnel_Sans } from "next/font/google";
 
 // Import components
 import Navigation from "../app/components/ui/navigation"
 import Footer from "../app/components/ui/footer"
 
+// Configure fonts
 const geistSans = Geist({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
+  variable: "--font-geist-sans",
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  variable: "--font-geist-mono",
+  display: "swap",
+});
+
+const funnelSans = Funnel_Sans({
+  subsets: ["latin"],
+  variable: "--font-funnel-sans",
+  display: "swap",
 });
 
 export const metadata = {
@@ -24,11 +36,13 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${funnelSans.variable} min-h-full antialiased scroll-smooth bg-gradient-to-br from-[var(--theme-dark)] to-[var(--theme-primary)] bg-no-repeat bg-cover`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-screen flex flex-col min-w-[350px]">
+        {/* Main Navigation */}
         <Navigation />
         {children}
+        {/* Footer */}
         <Footer />
       </body>
     </html>

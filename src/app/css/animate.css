@@ -1,0 +1,23 @@
+/* Marquee Animation */
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.track {
+  width: max-content;
+  animation: scrollText 100s linear infinite;
+}
+
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
