@@ -47,8 +47,9 @@ export default function Hero() {
                 <div className="w-full relative h-[200px] sm:h-[500px] md:h-[600px] md:pt-0 pt-5">
                     <img
                         id="hero-img"
-                        src="/media/profile.png"
+                        src="/media/profile.webp"
                         alt="David"
+                        fetchPriority="high"
                         className="
                                 md:bottom-[0px] 
                                 right-[0px] 
