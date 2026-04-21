@@ -14,7 +14,7 @@ export default async function Content() {
       link: "https://github.com/FEDavid/PHP-ticket_system",
       anchor: "phpticket",
       category: "Portfolio",
-      image: "/media/phpticket.png"
+      image: "/media/phpticket.webp"
     },
     {
       title: "Flask weather web application",
@@ -22,7 +22,7 @@ export default async function Content() {
       link: "https://github.com/FEDavid/flask-weather",
       anchor: "flaskweather",
       category: "Portfolio",
-      image: "/media/flaskweather.png"
+      image: "/media/flaskweather.webp"
     },
     {
       title: "React PWA Safety App - Beacon",
@@ -30,7 +30,7 @@ export default async function Content() {
       link: "https://github.com/FEDavid/DWT-CW",
       anchor: "reactpwa",
       category: "Portfolio",
-      image: "/media/reactpwa.png"
+      image: "/media/reactpwa.webp"
     }
   ];
 

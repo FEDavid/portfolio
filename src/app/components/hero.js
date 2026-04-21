@@ -49,6 +49,7 @@ export default function Hero() {
                         id="hero-img"
                         src="/media/profile.webp"
                         alt="David"
+                        rel="preload"
                         fetchPriority="high"
                         className="
                                 md:bottom-[0px] 
