@@ -21,3 +21,15 @@
     transform: translateX(-50%);
   }
 }
+
+/* CV accordion animation */
+.cv_accordion .cv_content {
+  height: 0;
+  overflow: clip;
+  transition: height 0.3s ease;
+  interpolate-size: allow-keywords;
+}
+
+.cv_accordion[open] .cv_content {
+  height: auto;
+}

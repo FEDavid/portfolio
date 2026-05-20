@@ -1,20 +1,19 @@
 'use client'
-
 // Hooks
 import { useEffect, useState } from "react"
-
 // Next
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
-
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -28,13 +27,20 @@ export default function Navigation() {
     { name: "Projects", href: "#content" },
     { name: "Posts", href: "#posts" },
     { name: "Contact", href: "#footer" },
+    { name: "CV", href: "/cv" },
   ]
+
+  // Prefix hash links with "/" when not on the home page so they navigate home first
+  const resolveHref = (href) => {
+    if (href.startsWith("#") && pathname !== "/") return `/${href}`
+    return href
+  }
 
   const separator = <span className="text-[var(--theme-highlight)]">/</span>
 
   return (
     <nav className={`${base} ${scrolled ? scrolledStyles : ""} transition-all duration-300`}>
-      
+
       {/* Logo */}
       <p className="font-funnel text-xl whitespace-nowrap">
         david-mould.<span className="font-[1000] text-[var(--theme-light)]">dev</span>
@@ -45,7 +51,7 @@ export default function Navigation() {
         {links.map((link, index) => (
           <div key={index} className="flex items-center gap-3 md:gap-6">
             <Link
-              href={link.href}
+              href={resolveHref(link.href)}
               className="text-sm text-neutral-400 hover:text-white transition"
             >
               {link.name}
@@ -74,16 +80,17 @@ export default function Navigation() {
             {links.map((link, index) => (
               <Link
                 key={index}
-                href={link.href}
+                href={resolveHref(link.href)}
                 onClick={() => setMenuOpen(false)}
                 className="text-neutral-400 hover:text-white transition text-sm flex justify-between group"
               >
-                {link.name}<span className='inline-block translate-x-1 transition-transform opacity-25 group-hover:opacity-100 group-hover:translate-x-2'>→</span>
+                {link.name}<span className="inline-block translate-x-1 transition-transform opacity-25 group-hover:opacity-100 group-hover:translate-x-2">→</span>
               </Link>
             ))}
           </div>
         </div>
       )}
+
     </nav>
   )
 }
